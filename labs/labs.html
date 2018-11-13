@@ -24,10 +24,14 @@ body {
   background-attachment: fixed;
   background-position: right bottom;
 
-	padding-top: 25px;
-  text-align: center;
-  width:700px;
-  margin: 0 auto;
+  position: absolute;
+  height: 200px;
+  width:400px;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-bottom: -200px;
+
 	font-family: 'Roboto';
 	color: white;
 
@@ -55,11 +59,65 @@ body {
 
 }
 
+button.header{
+
+  background: none;
+  border: none;
+
+  font-family: 'Roboto';
+  font-size: 40px;
+  color: white;
+
+}
+
+.titleCard {
+
+  position: fixed;
+
+  top: 100px !important;
+  left: 80px !important;
+
+  font-size: 55px;
+
+}
+
+#titleCard-projects{
+
+  float: left;
+
+}
+
+#titleCard-experience{
+
+  float: left;
+  padding-left: 100px;
+  color: gray;
+
+}
+
+#titleCard-education{
+
+  float: left;
+  padding-left: 100px;
+  color: gray;
+
+}
+
+#titleCard-contact{
+
+  float: left;
+  padding-left: 100px;
+  color: gray;
+
 }
 
 font-family: 'Roboto', sans-serif;
 
 </style>
+
+<script>
+
+</script>
 
 <body>
   <div id="breadcrumbs">
@@ -69,6 +127,22 @@ font-family: 'Roboto', sans-serif;
       <a href="https://stanivision.com/labs/labs.html">> Labs</a>
     </div>
   </div>
+
+  <div class="titleCard">
+    <div id="titleCard-projects">
+      <button class="header">Projects</button>
+    </div>
+    <div id="titleCard-experience">
+      <button class="header">Experience</button>
+    </div>
+    <div id="titleCard-education">
+      <button class="header">Education</button>
+    </div>
+    <div id="titleCard-contact">
+      <button class="header">Cotact</button>
+    </div>
+  </div>
+
 </body>
 
 </html>
