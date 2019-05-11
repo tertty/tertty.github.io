@@ -12,27 +12,115 @@
   <meta name="theme-color" content="#ffffff">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
 </head>
 
 <style>
 
-body {
-	background-color: black;
-	padding-top: 25px;
-  text-align: center;
-  width:700px;
-  margin: 0 auto;
-	font-family: 'Roboto';
-	color: white;
-}
+    body {
+        /*Adapted from http://www.infinitywebdesign.com/research/cssverticalcentereddiv.htm*/
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        width: 30em;
+        height:18em;
+        margin-top: -9em; /*set to a negative number 1/2 of your height*/
+        margin-left: -15em; /*set to a negative number 1/2 of your width*/
+
+        background-color: black;
+        font-family: 'Roboto';
+        color: white;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .content_box_title {
+        font-size: 62px;
+        text-align: left;
+
+        font-family: 'Comfortaa';
+    }
+
+    .content_box {
+        border-style: solid;
+        border-width: medium;
+        border-color: grey;
+    }
+
+    .labs_cuttout {
+        height: 60px;
+        width: 100%;
+        background-color: white;
+
+        line-height: 60px;
+        font-size: 40px;
+        text-align: left;
+        color: black;
+    }
+
+    .github_cuttout {
+        height: 60px;
+        width: 100%;
+        background-color: black;
+
+        line-height: 60px;
+        font-size: 40px;
+        text-align: left;
+        color: white;
+    }
+
+    .contact_cuttout {
+        height: 60px;
+        width: 100%;
+        background-color: white;
+
+        line-height: 60px;
+        font-size: 40px;
+        text-align: left;
+        color: black;
+    }
 
 font-family: 'Roboto', sans-serif;
+font-family: 'Comfortaa', cursive;
 
 </style>
 
 <body>
-  <img src="resources/images/back-at-it-logo.png">
-  Chill dude, we'll be back soon enough.
+
+    <div class="content_box_title"></div>
+
+    <div class="content_box">
+
+        <a href="labs/labs.html"> <div class="labs_cuttout">Labs</div> </a>
+
+        <a href="https://github.com/tertty"> <div class="github_cuttout">GitHub</div> </a>
+
+        <div class="contact_cuttout">Contact</div>
+
+    </div>
+
 </body>
+
+<script>
+
+//Adapted from https://www.w3schools.com/howto/howto_js_typewriter.asp
+
+var i = 0;
+var txt = 'Stanivision';
+var speed = 200;
+
+setTimeout(typeWriter, 0);
+
+function typeWriter() {
+    if (i < txt.length) {
+        document.getElementsByClassName("content_box_title")[0].innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+}
+
+</script>
 
 </html>
