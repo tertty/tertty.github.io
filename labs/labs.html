@@ -12,137 +12,125 @@
   <meta name="theme-color" content="#ffffff">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
 </head>
 
 <style>
 
 body {
+    /*Adapted from http://www.infinitywebdesign.com/research/cssverticalcentereddiv.htm*/
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    width: 30em;
+    height:18em;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
 
-	background-color: black;
-	background-image: url("/resources/images/stanivision-labs.png");
-	background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: right bottom;
-
-  position: absolute;
-  height: 200px;
-  width:400px;
-  top: 50%;
-  left: 50%;
-  margin-top: -100px;
-  margin-bottom: -200px;
-
-	font-family: 'Roboto';
-	color: white;
-
+    background-color: black;
+    font-family: 'Roboto';
+    color: white;
 }
 
-#breadcrumbs {
-
-  position: fixed;
-  margin: 0;
-  padding: 0;
-  top: 20px !important;
-  left: 20px !important;
-
+a {
+    text-decoration: none;
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
 }
 
-#breadcrumbs-text {
+.content_box_title {
+    font-size: 62px;
+    text-align: left;
+    
+    display: inline-block;
 
-  position: fixed;
-  margin: 0;
-  padding: 0;
-  top: 37px !important;
-  left: 80px !important;
-
-  color: white;
-
+    font-family: 'Comfortaa';
 }
 
-button.header{
-
-  background: none;
-  border: none;
-
-  font-family: 'Roboto';
-  font-size: 40px;
-  color: white;
-
+.content_box_title_icon {
+    float: right;
 }
 
-.titleCard {
+.content_box_bottom_left {
+    font-size: 62px;
+    color: white;
+    text-align: left;
 
-  position: fixed;
-
-  top: 100px !important;
-  left: 80px !important;
-
-  font-size: 55px;
-
+    font-family: 'Comfortaa';
 }
 
-#titleCard-projects{
-
-  float: left;
-
+.content_box {
+    border-style: solid;
+    border-width: medium;
+    border-color: grey;
 }
 
-#titleCard-experience{
+.white_cuttout {
+    height: 60px;
+    width: 100%;
+    background-color: white;
 
-  float: left;
-  padding-left: 100px;
-  color: gray;
-
+    line-height: 60px;
+    font-size: 40px;
+    text-align: left;
+    color: black;
 }
 
-#titleCard-education{
+.black_cuttout {
+    height: 60px;
+    width: 100%;
+    background-color: black;
 
-  float: left;
-  padding-left: 100px;
-  color: gray;
-
-}
-
-#titleCard-contact{
-
-  float: left;
-  padding-left: 100px;
-  color: gray;
-
+    line-height: 60px;
+    font-size: 40px;
+    text-align: left;
+    color: white;
 }
 
 font-family: 'Roboto', sans-serif;
+font-family: 'Comfortaa', cursive;
 
 </style>
 
-<script>
-
-</script>
-
 <body>
-  <div id="breadcrumbs">
-    <a href="https://stanivision.com"><img src="/resources/images/back-at-it-just-s.png"></a>
 
-    <div id="breadcrumbs-text">
-      <a href="https://stanivision.com/labs/labs.html">> Labs</a>
-    </div>
-  </div>
+<div class="content_box_title"></div> 
 
-  <div class="titleCard">
-    <div id="titleCard-projects">
-      <button class="header">Projects</button>
-    </div>
-    <div id="titleCard-experience">
-      <button class="header">Experience</button>
-    </div>
-    <div id="titleCard-education">
-      <button class="header">Education</button>
-    </div>
-    <div id="titleCard-contact">
-      <button class="header">Contact</button>
-    </div>
-  </div>
+<img class="content_box_title_icon" src="/resources/images/wrench-icon.png"></img>
+
+<div class="content_box">
+
+    <a href="labs/labs.html"> <div class="white_cuttout">Projects</div> </a>
+
+    <a href="https://github.com/tertty"> <div class="black_cuttout">Experience</div> </a>
+
+    <div class="white_cuttout">Education</div>
+
+</div>
+
+<a href="https://stanivision.com"> <div class="content_box_bottom_left"><</div> </a>
 
 </body>
+
+<script>
+
+//Adapted from https://www.w3schools.com/howto/howto_js_typewriter.asp
+
+var i = 0;
+var txt = 'Labs';
+var speed = 200;
+
+setTimeout(typeWriter, 0);
+
+function typeWriter() {
+if (i < txt.length) {
+    document.getElementsByClassName("content_box_title")[0].innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+}
+}
+
+</script>
 
 </html>

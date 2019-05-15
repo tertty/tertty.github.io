@@ -34,13 +34,22 @@
 
     a {
         text-decoration: none;
+        outline: 0;
+        border: none;
+        -moz-outline-style: none;
     }
 
     .content_box_title {
         font-size: 62px;
         text-align: left;
 
+        display: inline-block;
+
         font-family: 'Comfortaa';
+    }
+
+    .content_box_title_icon {
+        float: right;
     }
 
     .content_box {
@@ -91,13 +100,15 @@ font-family: 'Comfortaa', cursive;
 
     <div class="content_box_title"></div>
 
+    <img class="content_box_title_icon" src="/resources/images/home-icon.png"></img>
+
     <div class="content_box">
 
         <a href="labs/labs.html"> <div class="labs_cuttout">Labs</div> </a>
 
         <a href="https://github.com/tertty"> <div class="github_cuttout">GitHub</div> </a>
 
-        <div class="contact_cuttout">Contact</div>
+        <a href="mailto:taylor@stanivision.com"> <div class="contact_cuttout">Contact</div> </a>
 
     </div>
 
