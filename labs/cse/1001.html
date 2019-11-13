@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Stanivision Labs</title>
+  <title>Stanivision Labs - School Projects</title>
 
   <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -13,7 +13,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
-
+  
   <link href="/resources/css/styles.css" rel="stylesheet">
 </head>
 
@@ -33,7 +33,7 @@
         font-family: 'Roboto';
         color: white;
     }
-
+    
     a {
         text-decoration: none;
         outline: 0;
@@ -41,8 +41,20 @@
         -moz-outline-style: none;
     }
 
+    .year {
+        position: relative;
+        height: 75%;
+    }
+
+    .vertical_line {
+        border-right: 6px solid white;
+        height: 100px;
+        position: relative;
+        right: 20%;
+    }
+
     .content_box_title {
-        font-size: 62px;
+        font-size: 20px;
     }
 
     .content_box_bottom_left {
@@ -52,52 +64,40 @@
     .content_box_bottom_right {
         font-size: 20px;
     }
-
+    
     font-family: 'Roboto', sans-serif;
     font-family: 'Comfortaa', cursive;
-
+    
 </style>
-
+    
 <body>
-
-    <div class="content_box_title"></div> 
-
-    <img class="content_box_title_icon" src="/resources/images/wrench-icon.png"></img>
-
+    
+    <div class="content_box_title">Fundamentals of Software Development 1</div> 
+    
+    <img class="content_box_title_icon" src=""></img>
+    
     <div class="content_box">
-
-        <a href="school.html"> <div class="white_cuttout">School Projects</div> </a>
-
-        <a href=""> <div class="black_cuttout">Pebble</div> </a>
-
-        <a href=""> <div class="white_cuttout">HTML</div> </a>
+    
+        <a href=""> <div class="white_cuttout">Altitude</div> </a>
+    
+        <a href=""> <div class="black_cuttout">Words</div> </a>
+        
+        <a href=""> <div class="white_cuttout">Blackjack</div> </a>
+    
+        <a href=""> <div class="black_cuttout">Connect Four</div> </a>
 
     </div>
 
-    <a href="https://stanivision.com"> <div class="content_box_bottom_left"><</div> </a>
+        <a href="/labs/school.html"> <div class="content_box_bottom_left"><</div> </a>
 
-    <div class="content_box_bottom_right">Where the future is being made today</div>
-
+        <div class="content_box_bottom_right"></div>
+    
 </body>
-
+    
 <script>
-
-    //Adapted from https://www.w3schools.com/howto/howto_js_typewriter.asp
-
-    var i = 0;
-    var txt = 'Labs';
-    var speed = 200;
-
-    setTimeout(typeWriter, 0);
-
-    function typeWriter() {
-    if (i < txt.length) {
-        document.getElementsByClassName("content_box_title")[0].innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-    }
-    }
-
+    
+    
 </script>
-
+    
 </html>
+    

@@ -13,6 +13,8 @@
 
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
+  
+  <link href="/resources/css/styles.css" rel="stylesheet">
 </head>
 
 <style>
@@ -23,8 +25,8 @@
         top: 50%;
         left: 50%;
         width: 30em;
-        height:18em;
-        margin-top: -22em; /*set to a negative number 1/2 of your height*/
+        height: 18em;
+        margin-top: -24em; /*set to a negative number 1/2 of your height*/
         margin-left: -24em; /*set to a negative number 1/2 of your width*/
     
         background-color: black;
@@ -53,86 +55,26 @@
     
     .content_box_title {
         font-size: 62px;
-        text-align: left;
-        
-        display: inline-block; 
-        vertical-align: middle; 
-        line-height: 1;
-    
-        font-family: 'Comfortaa';
     }
-    
-    .content_box_title_icon {
-        float: right;
-        display: inline-block; 
-        vertical-align: middle; 
-        line-height: 1;
-    }
-    
+
     .content_box_bottom_left {
         font-size: 62px;
-        color: white;
-        text-align: left;
-    
-        display: inline-block; 
-        vertical-align: middle; 
-        line-height: 1;
-    
-        font-family: 'Comfortaa';
     }
-    
+
     .content_box_bottom_right {
         font-size: 62px;
-        color: white;
-        font-size: 20px;
-    
-        /*Did I really just tab over the text instead of right aligning it because I didn't know how to do so? I'm afraid so.*/
-    
-        margin-left: 49px;
-    
-        display: inline-block; 
-        vertical-align: middle; 
-        line-height: 1;
-    
-        font-family: 'Comfortaa';
     }
-    
-    .content_box {
-        border-style: solid;
-        border-width: medium;
-        border-color: grey;
 
+    .content_box {
         width: 160%;
     }
-    
-    .white_cuttout {
-        height: 60px;
-        width: 100%;
-        background-color: white;
-    
-        line-height: 60px;
-        font-size: 40px;
-        text-align: left;
-        color: black;        
-    }
-    
-    .black_cuttout {
-        height: 60px;
-        width: 100%;
-        background-color: black;
-    
-        line-height: 60px;
-        font-size: 40px;
-        text-align: left;
-        color: white;
-    }
-    
+
     font-family: 'Roboto', sans-serif;
     font-family: 'Comfortaa', cursive;
     
-    </style>
+</style>
     
-    <body>
+<body>
     
     <div class="year">
         <div class="content_box_title">Freshmen</div> 
@@ -141,9 +83,9 @@
         
         <div class="content_box">
         
-            <a href=""> <div class="white_cuttout">Fundamentals of Software Development 1</div> </a>
+            <a href="cse/1001.html"> <div class="white_cuttout">Fundamentals of Software Development 1</div> </a>
         
-            <a href=""> <div class="black_cuttout">Fundamentals of Software Development 2</div> </a>
+            <a href="cse/1002.html"> <div class="black_cuttout">Fundamentals of Software Development 2</div> </a>
             
         </div>
     </div>
@@ -159,7 +101,7 @@
         
         <div class="content_box">
         
-            <a href=""> <div class="white_cuttout">Algorithms & Data Structures</div> </a>
+            <a href="cse/2010.html"> <div class="white_cuttout">Algorithms & Data Structures</div> </a>
         
             <a href=""> <div class="black_cuttout">Programming in a Second Language</div> </a>
             
@@ -187,13 +129,15 @@
     <!-- Junior cutoff -->
 
     <img src="/resources/images/grad.png">
+
+    <a href="/labs/labs.html"> <div class="content_box_bottom_left"><</div> </a>
     
-    </body>
+</body>
     
-    <script>
+<script>
     
     
-    </script>
+</script>
     
-    </html>
+</html>
     
