@@ -8,6 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="resources/js/festiveindex.js"></script>
+  <script src="resources/js/snowstorm.js"></script>
 
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
@@ -71,7 +72,7 @@ body {
 .bottomleft {
 	position: fixed;
 	bottom: 0;
-	left: 0;
+	left: 20px;
 }
 
 h2 {
@@ -119,13 +120,14 @@ h2 {
 	height: 5px;
 }
 
-#youdoofeduptext {
+#return_message, #return_countdown {
 	color: white; 
 	font-size: 30px;
 	margin: auto;
 	right: 0;
 	left: 0;
 	width: 500px;
+  text-align: center;
 }
 
 #shortcuttext {
@@ -140,6 +142,14 @@ h2 {
 
 #headertext {
 	font-size: 80px;
+}
+
+#spotify_notify_box{
+  width: 301px;
+  height: 24px;
+  border: 1px solid black;
+  text-align: center;
+  background-color: lightgreen;
 }
 
 a:link, a:visited {
@@ -188,7 +198,7 @@ font-family: 'Lato', sans-serif;
 <div class="container">
   <h2>Bar Full of Festive</h2>
 
-  <div id="songinfo">
+  <div hidden=true id="songinfo">
 	SONG TITLE - ARTIST
   </div>
 
@@ -198,20 +208,32 @@ font-family: 'Lato', sans-serif;
 	</div>
   </div>
 
-  <div id="shortcuttext">
+  <!--
+  <div hidden=true id="shortcuttext">
 	m - Mute music s - Show current playing song
   </div>
+  -->
 
-  <div id="youdoofeduptext">
+  <div hidden=true id="return_message">
 	The Festivities Return: December 1st
   </div>
 
-  <div id="mutebtn">
+  <div hidden=true id="return_countdown">
+  ...
+  </div>
+
+  <div hidden=true id="mutebtn">
 	<button name="button" onclick="muteBtn()">Unmute Music</button>
   </div>
 
-  <div class="bottomleft">
-  	<iframe src="https://open.spotify.com/embed/playlist/6Rly3yLrPED35h0Y0OpjtU" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  <div onmouseenter="spotify_notify()" onmouseleave="spotify_notify()" class="bottomleft">
+    <div hidden=true onclick="spotify_widget()" id="spotify_notify_box">
+      You can hide this box by clicking me!
+    </div>
+
+    <div id="spotify_widget">
+  	  <iframe src="https://open.spotify.com/embed/playlist/6Rly3yLrPED35h0Y0OpjtU" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
   </div>
 
 </div>
