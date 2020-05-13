@@ -114,8 +114,7 @@ $(window).on("load", function() {
     }
     if(isfirsttime == 0){
         document.cookie = "firsttimecaller=1";
-    }else{
-        $(".alert").hide();
+        $(".alert").show();
     }
 
     //Hotkeys
