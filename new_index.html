@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Stanivision Home</title>
+  
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
+
+  <link href="/resources/css/styles.css" rel="stylesheet">
+
+</head>
+
+<style>
+
+@keyframes background_animation {
+  0%    {background-color: #465892;}
+  25%   {background-color: #546DA6;}
+  50%   {background-color: #968EAF;}
+  75%   {background-color: #6D5593;}
+  90%   {background-color: #543D7B;}
+  100%  {background-color: #465892;}
+}
+
+body {
+  /* Heavily inspired by https://tomanistor.com/ */
+  margin: 0;
+  background-color: black;
+
+	font-family: 'Comfortaa';
+	color: white;
+}
+
+.middle-xs {
+    align-items: center;
+}
+
+.center-xs {
+    justify-content: center;
+    text-align: center;
+}
+
+.row {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.col-xs-12 {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+.col-sm-2 {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+
+    flex-basis: 16.66666667%;
+    max-width: 16.66666667%;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+
+  color: white;
+  font-size: larger;
+}
+
+section {
+  display: block;
+
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    /* background-color: #fff; */
+}
+
+h1 {
+  margin: 0;
+}
+
+#landing {
+  animation-name: background_animation;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+#resume {
+  background-color: #546DA6;
+}
+
+#portfolio {
+  background-color: #968EAF;
+}
+
+#contact {
+  background-color: #6D5593;
+}
+
+#contact_content {
+  text-align: left;
+  padding: 30px;
+  padding-bottom: 10px;
+
+  border-style: dotted;
+  border-width: 2px;
+}
+
+font-family: 'Roboto', sans-serif;
+
+</style>
+
+<body>
+
+  <section class="row middle-xs center-xs" id="landing">
+
+    <div class="col-xs-12">
+      <img src="resources/images/back-at-it-logo-clear.png">
+      <p>Where the future is being made today</p>
+    </div>
+
+    <nav class="row middle-xs center-xs">
+      <div class="col-sm-2"><h3><a href="#resume">Resume</a></h3></div>
+      <div class="col-sm-2"><h3><a href="#portfolio">Portfolio</a></h3></div>
+      <div class="col-sm-2"><h3><a href="#contact">Contact</h3></div>
+    </nav>
+      
+  </section>
+
+  <section id="resume">
+  
+    <h1>Resume</h1>
+  
+  </section>
+
+  <section id="portfolio">
+  
+    <h1>Portfolio</h1>
+
+  </section>
+
+  <section id="contact">
+    
+    <h1>Contact</h1>
+
+    <section class="row middle-xs center-xs">
+
+      <div id="contact_content">
+        Email me at: <a href="mailto:taylor@stanivision.com">taylor@stanivision.com</a> <br><br>
+        Linkin with me: <a href="https://www.linkedin.com/in/taylorertrachter/">@taylorertrachter</a> <br><br>
+        Git clone me: <a href="https://github.com/tertty">@tertty</a> <br><br>
+        Follow me: <a href="https://www.instagram.com/taylorertrachter/">@taylorertrachter</a> <br><br>
+        Tweet me: <a href="https://twitter.com/tertty2">@tertty2</a> <br><br>
+      </div>
+      
+    </section>
+
+  </section>
+
+</body>
+
+</html>
