@@ -72,8 +72,16 @@ body {
 }
 
 .port_proj_box {
-  background-color:beige;
+  margin: auto auto auto 2.5%;
 
+  width: 20%;
+  float: left;
+
+  background-color:white;
+  text-align: center;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
 }
 
 a {
@@ -102,14 +110,18 @@ nav {
     /* background-color: #fff; */
 }
 
-h1 {
-  margin: 0;
-}
-
 #landing {
   animation-name: background_animation;
   animation-duration: 15s;
   animation-iteration-count: infinite;
+}
+
+#section_header {
+  display: inline-block;
+
+  margin: -1% auto -20% 4%;
+
+  font-size: 64px;
 }
 
 #resume {
@@ -129,6 +141,8 @@ h1 {
   padding: 30px;
   padding-bottom: 10px;
 
+  margin-top: -10%;
+
   border-width: 2px;
 }
 
@@ -139,6 +153,24 @@ h1 {
 
   border-style: dotted;
   border-width: 2px;
+}
+
+#port_proj_coverart {
+  background-color: #85857E;
+  padding-top: 5%;
+  padding-bottom: 2%;
+
+  border-radius: 8px 8px 0px 0px;
+  /* 164 x 176 */
+}
+
+#port_proj_title {
+  font-size: xx-large;
+}
+
+#port_proj_desc {
+  padding-left: 6%;
+  padding-right: 6%;
 }
 
 font-family: 'Roboto', sans-serif;
@@ -164,7 +196,7 @@ font-family: 'Roboto', sans-serif;
 
   <section id="resume">
   
-    <h1>Resume</h1>
+    <div id="section_header"><p>Resume</p></div>
 
     <section class="row middle-xs center-xs">
 
@@ -197,13 +229,71 @@ font-family: 'Roboto', sans-serif;
 
   <section id="portfolio">
   
-    <h1>Portfolio</h1>
+    <div id="section_header"><p>Portfolio</p></div>
 
     <section class="row middle-xs center-xs">
       
       <div class="port_proj_box">
       
-        Project 1
+        <div id="port_proj_coverart">
+          <img src="resources/images/rebble_cover.png">
+        </div>
+
+        <div id="port_proj_title">
+          <p>Rebble</p>
+        </div>
+
+        <div id="port_proj_desc">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fermentum ligula sit amet malesuada accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+      </div>
+
+      <div class="port_proj_box">
+      
+        <div id="port_proj_coverart">
+          <img src="resources/images/temp_cover.png">
+        </div>
+
+        <div id="port_proj_title">
+          <p>Website</p>
+        </div>
+
+        <div id="port_proj_desc">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fermentum ligula sit amet malesuada accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+      </div>
+
+      <div class="port_proj_box">
+        
+        <div id="port_proj_coverart">
+          <img src="resources/images/nvim_cover.png">
+        </div>
+
+        <div id="port_proj_title">
+          <p>Neovim</p>
+        </div>
+
+        <div id="port_proj_desc">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fermentum ligula sit amet malesuada accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+      </div>
+
+      <div class="port_proj_box">
+        
+        <div id="port_proj_coverart">
+          <img src="resources/images/nasa_cover.png">
+        </div>
+
+        <div id="port_proj_title">
+          <p>NASA LEC</p>
+        </div>
+
+        <div id="port_proj_desc">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fermentum ligula sit amet malesuada accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
 
       </div>
     
@@ -213,7 +303,7 @@ font-family: 'Roboto', sans-serif;
 
   <section id="contact">
     
-    <h1>Contact</h1>
+    <div id="section_header"><p>Contact</p></div>
 
     <section class="row middle-xs center-xs">
 
