@@ -15,98 +15,334 @@
   <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
 
   <link href="/resources/css/styles.css" rel="stylesheet">
+
 </head>
 
 <style>
 
-    body {
-        /*Adapted from http://www.infinitywebdesign.com/research/cssverticalcentereddiv.htm*/
-        position:absolute;
-        top: 50%;
-        left: 50%;
-        width: 30em;
-        height:18em;
-        margin-top: -9em; /*set to a negative number 1/2 of your height*/
-        margin-left: -15em; /*set to a negative number 1/2 of your width*/
+  @keyframes background_animation {
+    0%    {background-color: #465892;}
+    25%   {background-color: #546DA6;}
+    50%   {background-color: #968EAF;}
+    75%   {background-color: #6D5593;}
+    90%   {background-color: #543D7B;}
+    100%  {background-color: #465892;}
+  }
 
-        background-color: black;
-        font-family: 'Roboto';
-        color: white;
-    }
+  html {
+      scroll-snap-type: y mandatory;
+  }
 
-    a {
-        text-decoration: none;
-        outline: 0;
-        border: none;
-        -moz-outline-style: none;
-    }
+  body {
+    /* Heavily inspired by https://tomanistor.com/ */
+    margin: 0;
+    background-color: black;
+    overflow: ;
 
-    .content_box_title {
-        font-size: 62px;
-    }
+    font-family: 'Comfortaa';
+    /* font-family: 'Roboto', sans-serif; */
+    color: white;
+  }
 
-    .content_box_bottom_left {
-        font-size: 62px;
-    }
+  a {
+    text-decoration: none;
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
 
-    .content_box_bottom_right {
-        font-size: 16px;
-        color: white;
+    color: white;
+    font-size: larger;
+  }
 
-        margin-left: 56%;
+  section {
+    width: 100%;
+    height: 100vh;
+  }
 
-        display: inline-block; 
-        vertical-align: middle; 
-        line-height: 2;
+  nav {
+      position: absolute;
+      z-index: 100;
+      bottom: 0;
+      width: 100%;
+      height: 4rem;
+      /* background-color: #fff; */
+  }
 
-        font-family: 'Comfortaa';
-    }
+  .middle-xs {
+      align-items: center;
+  }
 
-font-family: 'Roboto', sans-serif;
-font-family: 'Comfortaa', cursive;
+  .center-xs {
+      justify-content: center;
+      text-align: center;
+  }
+
+  .row {
+      box-sizing: border-box;
+      display: flex;
+      flex: 0 1 auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+
+  .col-xs-12 {
+      flex-basis: 100%;
+      max-width: 100%;
+  }
+
+  .col-sm-2 {
+      box-sizing: border-box;
+      flex: 0 0 auto;
+
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+
+      flex-basis: 16.66666667%;
+      max-width: 16.66666667%;
+  }
+
+  .port_proj_box {
+    margin: auto auto auto 2.5%;
+
+    width: 20%;
+    height: 40%;
+    float: left;
+
+    background-color:white;
+    text-align: center;
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+  }
+
+  #landing {
+    animation-name: background_animation;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+
+    scroll-snap-align: start;
+  }
+
+  #section_header {
+    display: inline-block;
+
+    margin: -1% auto -20% 4%;
+
+    font-size: 64px;
+  }
+
+  #resume {
+    background-color: #546DA6;
+
+    scroll-snap-align: start;
+  }
+
+  #portfolio {
+    background-color: #968EAF;
+
+    scroll-snap-align: start;
+  }
+
+  #contact {
+    background-color: #6D5593;
+
+    scroll-snap-align: start;
+  }
+
+  #resume_content {
+    text-align: left;
+    padding: 30px;
+    padding-bottom: 10px;
+    width: 60%;
+
+    margin-top: -10%;
+
+    border-width: 2px;
+    border-style: solid;
+  }
+
+  #resume_center {
+    padding-left: 10%;
+  }
+
+  #contact_content {
+    text-align: left;
+    padding: 50px;
+    padding-bottom: 24px;
+
+    border-style: dotted;
+    border-width: 2px;
+
+    font-size: 22px;
+  }
+
+  #port_proj_coverart {
+    background-color: #85857E;
+    padding-top: 5%;
+    padding-bottom: 2%;
+
+    border-radius: 8px 8px 0px 0px;
+    /* 164 x 176 */
+  }
+
+  #port_proj_title {
+    font-size: xx-large;
+  }
+
+  #port_proj_desc {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
 
 </style>
 
 <body>
 
-    <div class="content_box_title"></div>
+  <section class="row middle-xs center-xs" id="landing">
 
-    <img class="content_box_title_icon" src="/resources/images/home-icon.png"></img>
-
-    <div class="content_box">
-
-        <a href="labs/labs.html"> <div class="white_cuttout">Portfolio</div> </a>
-
-        <a href="https://github.com/tertty"> <div class="black_cuttout">GitHub</div> </a>
-
-        <a href="https://www.linkedin.com/in/taylorertrachter/"> <div class="white_cuttout">Linkedin</div> </a>
-
-        <a href="mailto:taylor@stanivision.com"> <div class="black_cuttout">Contact</div> </a>
-
+    <div class="col-xs-12">
+      <img src="resources/images/back-at-it-logo-clear.png">
+      <p>Where the future is being made today</p>
     </div>
 
-    <div class="content_box_bottom_right">Made with ❤️ by Taylor E.</div>
+    <nav class="row middle-xs center-xs">
+      <div class="col-sm-2"><h3><a href="#resume">Resume</a></h3></div>
+      <div class="col-sm-2"><h3><a href="#portfolio">Portfolio</a></h3></div>
+      <div class="col-sm-2"><h3><a href="#contact">Contact</a></h3></div>
+    </nav>
+      
+  </section>
+
+  <section id="resume">
+  
+    <div id="section_header"><p>Resume</p></div>
+
+    <section class="row middle-xs center-xs">
+
+      <div id="resume_content">
+        <h2><u>Education</u></h2>
+        
+        <div id="resume_center">
+          <p>Florida Institute of Technology, Melbourne, FL</p>	    
+          <p>Bachelor of Science in Software Engineering</p>
+          <p>Minor in Business Management</p>
+          <p>Expected Graduation: May 2021</p>
+        </div>
+        
+        <h2><u>Languages I love</u></h2>
+        <p id="resume_center">C, Java, Python, HTML, Javascript, R</p>
+        
+        <h2><u>Work</u></h2>
+
+        <div id="resume_center">
+          <h3>Gleason Performing Arts Center Technician</h3>
+          <h3>Tech Support Center Analyst</h3>
+          <h3>Business Analyst and Help Desk Tech (internship)</h3>
+          <h3>Information Technology Office Intern</h3>
+        </div>
+
+        <a href="resources/docs/Taylor_Ertrachter_Resume.docx">Grab a copy</a>
+
+      </div>
+
+    </section>
+  
+  </section>
+
+  <section id="portfolio">
+  
+    <div id="section_header"><p>Portfolio</p></div>
+
+    <section class="row middle-xs center-xs">
+      
+      <div class="port_proj_box" onclick="window.open('https://github.com/tertty/RebbleOS','awindow');" style="cursor: pointer;">
+      
+        <div id="port_proj_coverart">
+          <img src="resources/images/rebble_cover.png">
+        </div>
+
+        <div id="port_proj_title">
+          <p>RebbleOS</p>
+        </div>
+
+        <div id="port_proj_desc">
+          <p>Open source operating system for low-power smartwatches</p>
+        </div>
+
+      </div>
+
+      <div class="port_proj_box" onclick="window.open('https://github.com/tertty/tertty.github.io','awindow');" style="cursor: pointer;">
+      
+        <div id="port_proj_coverart">
+          <img src="resources/images/temp_cover.png">
+        </div>
+
+        <div id="port_proj_title">
+          <p>Stanivision</p>
+        </div>
+
+        <div id="port_proj_desc">
+          <p>Where the future is being made today</p>
+        </div>
+
+      </div>
+
+      <div class="port_proj_box" onclick="window.open('https://github.com/tertty/neovim','awindow');" style="cursor: pointer;">
+        
+        <div id="port_proj_coverart">
+          <img src="resources/images/nvim_cover.png">
+        </div>
+
+        <div id="port_proj_title">
+          <p>Neovim</p>
+        </div>
+
+        <div id="port_proj_desc">
+          <p>Vim-fork focused on extensibility and usability</p>
+        </div>
+
+      </div>
+
+      <div class="port_proj_box"  onclick="window.open('https://github.com/Florida-Tech-NASA-LEC','awindow');" style="cursor: pointer;">
+        
+        <div id="port_proj_coverart">
+          <img src="resources/images/nasa_cover.png">
+        </div>
+
+        <div id="port_proj_title">
+          <p>NASA LEC</p>
+        </div>
+
+        <div id="port_proj_desc">
+          <p>Senior design project that's out of this world</p>
+        </div>
+
+      </div>
+    
+    </section>
+
+  </section>
+
+  <section id="contact">
+    
+    <div id="section_header"><p>Contact</p></div>
+
+    <section class="row middle-xs center-xs">
+
+      <div id="contact_content">
+        Email me at: <a href="mailto:taylor@stanivision.com">taylor@stanivision.com</a> <br><br>
+        Linkin with me: <a href="https://www.linkedin.com/in/taylorertrachter/">@taylorertrachter</a> <br><br>
+        Git clone me: <a href="https://github.com/tertty">@tertty</a> <br><br>
+        Follow me: <a href="https://www.instagram.com/taylorertrachter/">@taylorertrachter</a> <br><br>
+        Tweet me: <a href="https://twitter.com/tertty2">@tertty2</a> <br><br>
+      </div>
+      
+    </section>
+
+  </section>
+
+  <p style="text-align: center; margin-top: 2.5%;">Thanks for checking me out!</p>
 
 </body>
-
-<script>
-
-//Adapted from https://www.w3schools.com/howto/howto_js_typewriter.asp
-
-var i = 0;
-var txt = 'Stanivision';
-var speed = 200;
-
-setTimeout(typeWriter, 0);
-
-function typeWriter() {
-    if (i < txt.length) {
-        document.getElementsByClassName("content_box_title")[0].innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-    }
-}
-
-</script>
 
 </html>

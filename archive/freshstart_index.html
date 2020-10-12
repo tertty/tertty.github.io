@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Stanivision Home</title>
+  
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
+
+  <link href="/resources/css/styles.css" rel="stylesheet">
+</head>
+
+<style>
+
+    body {
+        /*Adapted from http://www.infinitywebdesign.com/research/cssverticalcentereddiv.htm*/
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        width: 30em;
+        height:18em;
+        margin-top: -9em; /*set to a negative number 1/2 of your height*/
+        margin-left: -15em; /*set to a negative number 1/2 of your width*/
+
+        background-color: black;
+        font-family: 'Roboto';
+        color: white;
+    }
+
+    a {
+        text-decoration: none;
+        outline: 0;
+        border: none;
+        -moz-outline-style: none;
+    }
+
+    .content_box_title {
+        font-size: 62px;
+    }
+
+    .content_box_bottom_left {
+        font-size: 62px;
+    }
+
+    .content_box_bottom_right {
+        font-size: 16px;
+        color: white;
+
+        margin-left: 56%;
+
+        display: inline-block; 
+        vertical-align: middle; 
+        line-height: 2;
+
+        font-family: 'Comfortaa';
+    }
+
+font-family: 'Roboto', sans-serif;
+font-family: 'Comfortaa', cursive;
+
+</style>
+
+<body>
+
+    <div class="content_box_title"></div>
+
+    <img class="content_box_title_icon" src="/resources/images/home-icon.png"></img>
+
+    <div class="content_box">
+
+        <a href="labs/labs.html"> <div class="white_cuttout">Portfolio</div> </a>
+
+        <a href="https://github.com/tertty"> <div class="black_cuttout">GitHub</div> </a>
+
+        <a href="https://www.linkedin.com/in/taylorertrachter/"> <div class="white_cuttout">Linkedin</div> </a>
+
+        <a href="mailto:taylor@stanivision.com"> <div class="black_cuttout">Contact</div> </a>
+
+    </div>
+
+    <div class="content_box_bottom_right">Made with ❤️ by Taylor E.</div>
+
+</body>
+
+<script>
+
+//Adapted from https://www.w3schools.com/howto/howto_js_typewriter.asp
+
+var i = 0;
+var txt = 'Stanivision';
+var speed = 200;
+
+setTimeout(typeWriter, 0);
+
+function typeWriter() {
+    if (i < txt.length) {
+        document.getElementsByClassName("content_box_title")[0].innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+}
+
+</script>
+
+</html>
