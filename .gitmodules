@@ -1,0 +1,3 @@
+[submodule "labs/html/bar"]
+	path = labs/html/bar
+	url = https://github.com/tertty/Bar-Full-of-Festive
