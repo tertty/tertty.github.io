@@ -1,3 +1,6 @@
 [submodule "labs/html/bar"]
 	path = labs/html/bar
 	url = https://github.com/tertty/Bar-Full-of-Festive
+[submodule "labs/html/calendar"]
+	path = labs/html/calendar
+	url = https://github.com/tertty/calendar.stanivision.com.git
