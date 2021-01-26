@@ -17,198 +17,18 @@
   <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
 
-  <link href="/resources/css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen and (min-width: 2000px)" href="resources/css/layout_large.css">
+  <link rel="stylesheet" type="text/css" media="screen and (min-width: 1024px) and (max-width: 2000px)" href="resources/css/layout_reasonable.css">
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 1024px)" href="resources/css/layout_mobile.css">
 
 </head>
-
-<style>
-
-  @keyframes background_animation {
-    0%    {background-color: #465892;}
-    25%   {background-color: #546DA6;}
-    50%   {background-color: #968EAF;}
-    75%   {background-color: #6D5593;}
-    90%   {background-color: #543D7B;}
-    100%  {background-color: #465892;}
-  }
-
-  html {
-      scroll-snap-type: y mandatory;
-  }
-
-  body {
-    /* Heavily inspired by https://tomanistor.com/ */
-    margin: 0;
-    background-color: black;
-    overflow: ;
-
-    font-family: 'Comfortaa';
-    /* font-family: 'Roboto', sans-serif; */
-    color: white;
-  }
-
-  a {
-    text-decoration: none;
-    outline: 0;
-    border: none;
-    -moz-outline-style: none;
-
-    color: white;
-    font-size: 1.5vw;
-  }
-
-  section {
-    max-width: 100%;
-    height: 100vh;
-  }
-
-  nav {
-      position: absolute;
-      z-index: 100;
-      bottom: 0;
-      width: 100%;
-      height: 4rem;
-      /* background-color: #fff; */
-  }
-
-  .middle-xs {
-      align-items: center;
-  }
-
-  .center-xs {
-      justify-content: center;
-      text-align: center;
-  }
-
-  .row {
-      box-sizing: border-box;
-      display: flex;
-      flex: 0 1 auto;
-      flex-direction: row;
-      flex-wrap: wrap;
-  }
-
-  .col-xs-12 {
-      flex-basis: 100%;
-      max-width: 100%;
-  }
-
-  .col-sm-2 {
-      box-sizing: border-box;
-      flex: 0 0 auto;
-
-      padding-right: 0.5rem;
-      padding-left: 0.5rem;
-
-      flex-basis: 16.66666667%;
-      max-width: 16.66666667%;
-  }
-
-  .port_proj_box {
-    margin: auto auto auto 2.5%;
-
-    max-width: 20%;
-    max-height: 40%;
-    float: left;
-
-    background-color:white;
-    text-align: center;
-    color: black;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 10px;
-  }
-
-  #landing {
-    animation-name: background_animation;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-
-    scroll-snap-align: start;
-  }
-
-  #section_header {
-    display: inline-block;
-
-    margin: -1% auto -20% 4%;
-
-    font-size: 5vw;
-  }
-
-  #resume {
-    background-color: #546DA6;
-
-    scroll-snap-align: start;
-  }
-
-  #portfolio {
-    background-color: #968EAF;
-
-    scroll-snap-align: start;
-  }
-
-  #contact {
-    background-color: #6D5593;
-
-    scroll-snap-align: start;
-  }
-
-  #resume_content {
-    text-align: left;
-    padding: 30px;
-    padding-bottom: 10px;
-    max-width: 60%;
-
-    margin-top: -10%;
-
-    border-width: 2px;
-    border-style: solid;
-
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-
-  #resume_center {
-    padding-left: 10%;
-  }
-
-  #contact_content {
-    text-align: left;
-    padding: 50px;
-    padding-bottom: 24px;
-
-    border-style: dotted;
-    border-width: 2px;
-
-    font-size: 2vw;
-
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-
-  #port_proj_coverart {
-    background-color: #85857E;
-    padding-top: 5%;
-    padding-bottom: 2%;
-
-    border-radius: 8px 8px 0px 0px;
-    /* 164 x 176 */
-  }
-
-  #port_proj_title {
-    font-size: 2.5vw;
-  }
-
-  #port_proj_desc {
-    padding-left: 6%;
-    padding-right: 6%;
-  }
-
-</style>
 
 <body>
 
   <section class="row middle-xs center-xs" id="landing">
 
     <div class="col-xs-12">
-      <img src="resources/images/back-at-it-logo-clear.png">
+      <img src="resources/images/back-at-it-logo-clear.png" style="max-width: 100%;">
       <p style="font-family: 'Open Sans';">Where the future is being made today</p>
     </div>
 
@@ -265,7 +85,7 @@
       <div class="port_proj_box" onclick="window.open('https://github.com/tertty/RebbleOS','awindow');" style="cursor: pointer;">
       
         <div id="port_proj_coverart">
-          <img src="resources/images/rebble_cover.png">
+          <img src="resources/images/rebble_cover.png" style="max-width: 100%;">
         </div>
 
         <div id="port_proj_title">
@@ -281,7 +101,7 @@
       <div class="port_proj_box" onclick="window.open('https://github.com/tertty/tertty.github.io','awindow');" style="cursor: pointer;">
       
         <div id="port_proj_coverart">
-          <img src="resources/images/temp_cover.png">
+          <img src="resources/images/temp_cover.png" style="max-width: 100%;">
         </div>
 
         <div id="port_proj_title">
@@ -297,7 +117,7 @@
       <div class="port_proj_box" onclick="window.open('https://github.com/tertty/neovim','awindow');" style="cursor: pointer;">
         
         <div id="port_proj_coverart">
-          <img src="resources/images/nvim_cover.png">
+          <img src="resources/images/nvim_cover.png" style="max-width: 100%;">
         </div>
 
         <div id="port_proj_title">
@@ -313,7 +133,7 @@
       <div class="port_proj_box"  onclick="window.open('https://github.com/Florida-Tech-NASA-LEC','awindow');" style="cursor: pointer;">
         
         <div id="port_proj_coverart">
-          <img src="resources/images/nasa_cover.png">
+          <img src="resources/images/nasa_cover.png" style="max-width: 100%;">
         </div>
 
         <div id="port_proj_title">
