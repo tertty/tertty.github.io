@@ -1,69 +1,50 @@
-.content_box_title {
-    text-align: left;
-    
-    display: inline-block; 
-    vertical-align: middle; 
-    line-height: 1;
-
-    font-family: 'Comfortaa';
+@keyframes page_background_animation {
+    0%    {background-color: #465892;}
+    25%   {background-color: #546DA6;}
+    50%   {background-color: #968EAF;}
+    75%   {background-color: #6D5593;}
+    90%   {background-color: #543D7B;}
+    100%  {background-color: #465892;}
 }
 
-.content_box_title_icon {
-    float: right;
-    display: inline-block; 
-    vertical-align: middle; 
-    line-height: 1;
+@keyframes peek_business_card_animation {
+    0% {bottom: -20%;}
+    100% {bottom: -2%;}
 }
 
-.content_box_bottom_left {
-    color: white;
-    text-align: left;
+body {
+    animation: page_background_animation 15s ease infinite;
 
-    display: inline-block; 
-    vertical-align: middle; 
-    line-height: 1;
-
-    font-family: 'Comfortaa';
-}
-
-.content_box_bottom_right {
-    color: white;
-
-    /*Did I really just tab over the text instead of right aligning it because I didn't know how to do so? I'm afraid so.*/
-
-    margin-left: 49px;
-
-    display: inline-block; 
-    vertical-align: middle; 
-    line-height: 1;
-
-    font-family: 'Comfortaa';
-}
-
-.content_box {
-    border-style: solid;
-    border-width: medium;
-    border-color: grey;
-}
-
-.white_cuttout {
-    height: 60px;
-    width: 100%;
-    background-color: white;
-
-    line-height: 60px;
-    font-size: 40px;
-    text-align: left;
-    color: black;        
-}
-
-.black_cuttout {
-    height: 60px;
-    width: 100%;
     background-color: black;
-
-    line-height: 60px;
-    font-size: 40px;
-    text-align: left;
+    font-family: 'Comfortaa';
+    /* font-family: 'Roboto', sans-serif; */
     color: white;
+    overflow: hidden;
+}
+
+#landing_text {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 40%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#peek_business_card {
+    position: absolute;
+    left: 50%;
+    bottom: -20%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.8);
+}
+
+#peek_business_card:hover {
+    animation: peek_business_card_animation 2s ease forwards;
+}
+
+#main_business_card {
+    width: 100px;
 }
