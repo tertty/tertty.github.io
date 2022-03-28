@@ -7,9 +7,29 @@
     100%  {background-color: #465892;}
 }
 
-@keyframes peek_business_card_animation {
-    0% {bottom: -20%;}
-    100% {bottom: -2%;}
+@keyframes peek_business_card_bottoms_up_animation {
+    from {bottom: -20%;}
+    to {bottom: -2%;}
+}
+
+@keyframes peek_business_card_hover_animation {
+    from {bottom: -2%;}
+    to {bottom: 0%;}
+}
+
+@keyframes peek_business_card_to_center_stage_animation {
+    from {bottom: 0%;}
+    to {bottom: -10%;}
+}
+
+@keyframes grow_business_card_animation {
+    from {width: auto;}
+    to {width: 1000px;}
+}
+
+@keyframes hint_text_to_away_animation {
+    from {opacity: 100%;}
+    to {opacity: 0%; visibility: hidden;}
 }
 
 body {
@@ -22,6 +42,22 @@ body {
     overflow: hidden;
 }
 
+.landing_transition {
+    animation: peek_business_card_bottoms_up_animation 2s ease 1s forwards, peek_business_card_hover_animation 2s ease 3s infinite alternate;
+}
+
+.center_stage_business_card_transition {
+    animation: peek_business_card_to_center_stage_animation 2s ease forwards;
+}
+
+.grow_business_card_transition {
+    animation: grow_business_card_animation 2s ease forwards;
+}
+
+.center_stage_hint_text_transition {
+    animation: hint_text_to_away_animation 1s ease forwards;
+}
+
 #landing_text {
     position: absolute;
     text-align: center;
@@ -31,18 +67,16 @@ body {
     transform: translate(-50%, -50%);
 }
 
-#peek_business_card {
+#landing_card {
     position: absolute;
     left: 50%;
     bottom: -20%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-
-    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.8);
 }
 
-#peek_business_card:hover {
-    animation: peek_business_card_animation 2s ease forwards;
+#peek_business_card {
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.8);
 }
 
 #main_business_card {
